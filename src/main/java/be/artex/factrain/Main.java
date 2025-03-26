@@ -1,8 +1,6 @@
 package be.artex.factrain;
 
 import be.artex.factrain.api.items.Items;
-import be.artex.factrain.commands.itemCommands.BowCommand;
-import be.artex.factrain.commands.itemCommands.SwordCommand;
 import be.artex.factrain.items.bows.CupidonBow;
 import be.artex.factrain.items.bows.EnderBow;
 import be.artex.factrain.items.swords.AssasinSword;

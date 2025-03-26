@@ -22,8 +22,6 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Random;
 
-import static be.artex.factrain.listeners.items.PlayerInteract.prepareGear;
-
 public class InventoryClick implements Listener {
     public static Inventory clickedInventory;
     public static ItemStack clickedItem;
@@ -77,7 +75,7 @@ public class InventoryClick implements Listener {
             }
 
             e.setCancelled(true);
-            Run run = Runs.getPlayerRun(player);
+            Run run = Runs.getPlayerRuns(player);
             run.setBow(bow);
             Runs.setPlayerRun(player, run);
 
@@ -89,7 +87,7 @@ public class InventoryClick implements Listener {
 
             player.teleport(new Location(Bukkit.getWorlds().get(0), x, Bukkit.getWorlds().get(0).getHighestBlockYAt(x, z), z));
 
-            PlayerInteract.prepareGear(Runs.getPlayerRun(player));
+            PlayerInteract.prepareGear(Runs.getPlayerRuns(player));
         }
     }
 }

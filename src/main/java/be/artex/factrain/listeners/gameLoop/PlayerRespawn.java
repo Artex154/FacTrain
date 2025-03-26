@@ -29,7 +29,7 @@ public class PlayerRespawn implements Listener {
         }
 
         e.getEntity().getKiller().getInventory().clear();
-        PlayerInteract.prepareGear(Runs.getPlayerRun(e.getEntity().getKiller()));
+        PlayerInteract.prepareGear(Runs.getPlayerRuns(e.getEntity().getKiller()));
 
         e.getEntity().getKiller().setHealth(e.getEntity().getKiller().getMaxHealth());
     }

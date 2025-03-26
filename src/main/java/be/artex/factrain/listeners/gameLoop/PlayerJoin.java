@@ -1,15 +1,12 @@
 package be.artex.factrain.listeners.gameLoop;
 
 import be.artex.factrain.Stacks;
-import be.raft.crafty.item.ItemBuilder;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 public class PlayerJoin implements Listener {
     @EventHandler

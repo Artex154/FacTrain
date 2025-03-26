@@ -20,7 +20,7 @@ public final class Runs {
         playerRuns.remove(player.getUniqueId());
     }
 
-    public static Run getPlayerRun(Player player) {
+    public static Run getPlayerRuns(Player player) {
         return playerRuns.get(player.getUniqueId());
     }
 
