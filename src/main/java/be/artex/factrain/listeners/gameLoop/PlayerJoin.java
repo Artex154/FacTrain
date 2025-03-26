@@ -1,5 +1,6 @@
 package be.artex.factrain.listeners.gameLoop;
 
+import be.artex.factrain.Stacks;
 import be.raft.crafty.item.ItemBuilder;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
@@ -11,10 +12,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class PlayerJoin implements Listener {
-    public static final ItemStack play = ItemBuilder.create(Material.DIAMOND_AXE)
-            .displayName(ChatColor.RESET + "Jouer")
-            .build();
-
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
@@ -26,11 +23,7 @@ public class PlayerJoin implements Listener {
             player.getActivePotionEffects().remove(pe);
         }
 
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1, false, false));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 1, false, false));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 0, false, false));
-
-        player.getInventory().setItem(4, play);
+        player.getInventory().setItem(4, Stacks.PLAY);
 
         player.teleport(new Location(Bukkit.getWorlds().get(0), 0, 122, 0));
         player.setGameMode(GameMode.ADVENTURE);

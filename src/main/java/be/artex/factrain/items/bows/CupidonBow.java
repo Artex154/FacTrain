@@ -22,7 +22,7 @@ public class CupidonBow extends BowItem {
 
         stack = ItemBuilder.create(Material.BOW)
                 .displayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Arc du Cupidon")
-                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "aUIplMoKmLLghvBNaOmK", ChatColor.RESET + "" + ChatColor.GOLD + "Flame" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Power 5" + ChatColor.DARK_GRAY + ", " + ChatColor.DARK_PURPLE + "Infinity" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Punch 4")
+                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "aUIplMoKmLLghvBNaOmK", " ", ChatColor.RESET + "" + ChatColor.GOLD + "Flame" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Power 5" + ChatColor.DARK_GRAY + ", " + ChatColor.DARK_PURPLE + "Infinity" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Punch 4", " ")
                 .addEnchant(Enchantment.ARROW_DAMAGE, 5)
                 .addEnchant(Enchantment.ARROW_INFINITE, 1)
                 .addEnchant(Enchantment.DURABILITY, 5, true)

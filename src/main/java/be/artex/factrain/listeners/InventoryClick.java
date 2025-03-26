@@ -1,6 +1,7 @@
 package be.artex.factrain.listeners;
 
 import be.artex.factrain.Main;
+import be.artex.factrain.Stacks;
 import be.artex.factrain.api.Run;
 import be.artex.factrain.api.Runs;
 import be.artex.factrain.api.items.Items;
@@ -43,7 +44,7 @@ public class InventoryClick implements Listener {
         clickedInventory = e.getClickedInventory();
         clickedItem = e.getCurrentItem();
 
-        if (clickedItem.equals(BowCommand.border)) {
+        if (clickedItem.equals(Stacks.BORDER())) {
             e.setCancelled(true);
             return;
         }

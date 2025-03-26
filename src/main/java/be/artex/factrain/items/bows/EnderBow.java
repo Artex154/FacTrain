@@ -27,7 +27,7 @@ public class EnderBow extends BowItem {
 
         stack = ItemBuilder.create(Material.BOW)
                 .displayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Arc de l'Ender")
-                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "aUIplMoKmLLghvBNaOmK", ChatColor.RESET + "" + ChatColor.DARK_PURPLE + "Infinity")
+                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "aUIplMoKmLLghvBNaOmK", " ", ChatColor.RESET + "" + ChatColor.DARK_PURPLE + "Infinity", " ")
                 .addEnchant(Enchantment.ARROW_INFINITE, 1)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)
                 .build();

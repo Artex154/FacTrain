@@ -21,7 +21,7 @@ public class AssasinSword extends SwordItem {
 
         stack = ItemBuilder.create(Material.DIAMOND_SWORD)
                 .displayName(ChatColor.RED + "" + ChatColor.BOLD + "Lame de l'Assasin")
-                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "uIoPMlkhJNBfGhBNaEhJ", ChatColor.RESET + "" + ChatColor.GOLD + "Fire Aspect 2" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Sharpness 6")
+                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "uIoPMlkhJNBfGhBNaEhJ", " ", ChatColor.RESET + "" + ChatColor.GOLD + "Fire Aspect 2" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Sharpness 6")
                 .addEnchant(Enchantment.FIRE_ASPECT, 2)
                 .addEnchant(Enchantment.DAMAGE_ALL, 6, false)
                 .addEnchant(Enchantment.DURABILITY, 5, false)

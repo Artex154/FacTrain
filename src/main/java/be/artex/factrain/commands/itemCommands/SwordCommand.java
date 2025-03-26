@@ -1,5 +1,6 @@
 package be.artex.factrain.commands.itemCommands;
 
+import be.artex.factrain.Stacks;
 import be.artex.factrain.api.items.Items;
 import be.artex.factrain.api.items.sword.SwordItem;
 import org.bukkit.Bukkit;
@@ -12,45 +13,30 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class SwordCommand implements CommandExecutor {
-    public static Inventory inventory;
+import java.util.Stack;
 
-    public SwordCommand() {
-        inventory = Bukkit.createInventory(null, 27, "swords");
-    }
+public class SwordCommand implements CommandExecutor {
+    public static Inventory inventory = Bukkit.createInventory(null, 27, "Swords");
 
     public static Inventory prepareSwordInv() {
-        ItemStack border = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7);
-        ItemMeta itemMeta = border.getItemMeta();
-        itemMeta.setDisplayName(" ");
-        border.setItemMeta(itemMeta);
+        ItemStack border = Stacks.BORDER();
 
         inventory.setItem(0, border);
         inventory.setItem(1, border);
-        inventory.setItem(2, border);
-        inventory.setItem(3, border);
-        inventory.setItem(4, border);
-        inventory.setItem(5, border);
-        inventory.setItem(6, border);
         inventory.setItem(7, border);
         inventory.setItem(8, border);
         inventory.setItem(9, border);
         inventory.setItem(17, border);
         inventory.setItem(18, border);
         inventory.setItem(19, border);
-        inventory.setItem(20, border);
-        inventory.setItem(21, border);
-        inventory.setItem(22, border);
-        inventory.setItem(23, border);
-        inventory.setItem(24, border);
         inventory.setItem(25, border);
         inventory.setItem(26, border);
 
-        int v = 9;
+        int s = 9;
 
         for (SwordItem item : Items.registeredSwordItems) {
-            v++;
-            inventory.setItem(v, item.getStack());
+            s++;
+            inventory.setItem(s, item.getStack());
         }
 
         return inventory;
@@ -58,12 +44,11 @@ public class SwordCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player))
-            return false;
-
         prepareSwordInv();
 
-        ((Player) sender).openInventory(inventory);
+        Player player = (Player) sender;
+
+        player.openInventory(inventory);
 
         return true;
     }
