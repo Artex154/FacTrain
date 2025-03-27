@@ -7,6 +7,7 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
@@ -25,7 +26,7 @@ public class GlacialSword extends SwordItem {
     public ItemStack getStack() {
         return ItemBuilder.create(Material.DIAMOND_SWORD)
                 .displayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Lame Glaciale")
-                .setLore(ChatColor.RESET + "" + ChatColor.DARK_GRAY + "agJUoyDugHGFbzReKmLn", " ", ChatColor.RESET + "" + ChatColor.GOLD + "Fire Aspect 2" + ChatColor.DARK_GRAY + ", " + ChatColor.RED + "Sharpness 5", " ", ChatColor.GRAY + "Permet de donner" + ChatColor.DARK_GRAY + " slowness " + ChatColor.GRAY + "en " + ChatColor.RED + "tappant" + ChatColor.GRAY + ".")
+                .setLore(ChatColor.DARK_GRAY + "agJUoyDugHGFbzReKmLn", " ", ChatColor.GOLD + "Fire Aspect 2" + ChatColor.DARK_GRAY + ", " + ChatColor.RED + "Sharpness 5", " ", ChatColor.GRAY + "Permet de donner" + ChatColor.DARK_GRAY + " slowness " + ChatColor.GRAY + "en " + ChatColor.RED + "tappant" + ChatColor.GRAY + ".")
                 .addEnchant(Enchantment.FIRE_ASPECT, 2)
                 .addEnchant(Enchantment.DAMAGE_ALL, 5)
                 .addEnchant(Enchantment.DURABILITY, 5, true)
@@ -39,7 +40,7 @@ public class GlacialSword extends SwordItem {
     }
 
     @Override
-    public void onClick(Player player) {
+    public void onClick(PlayerInteractEvent event) {
 
     }
 }

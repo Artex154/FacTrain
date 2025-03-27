@@ -107,7 +107,7 @@ public class PlayerInteract implements Listener {
 
         for (Item item : Items.registeredItems) {
             if (item.getStack().equals(e.getItem())) {
-                item.onClick(e.getPlayer());
+                item.onClick(e);
                 break;
             }
         }
