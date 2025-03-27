@@ -4,6 +4,7 @@ import be.artex.factrain.api.items.Items;
 import be.artex.factrain.items.bows.CupidonBow;
 import be.artex.factrain.items.bows.EnderBow;
 import be.artex.factrain.items.swords.AssasinSword;
+import be.artex.factrain.items.swords.GlacialSword;
 import be.artex.factrain.listeners.FoodLevelChange;
 import be.artex.factrain.listeners.InventoryClick;
 import be.artex.factrain.listeners.gameLoop.PlayerJoin;
@@ -38,6 +39,8 @@ public final class Main extends JavaPlugin {
         Items.registerItem(new EnderBow());
         Items.registerItem(new AssasinSword());
         Items.registerItem(new CupidonBow());
+
+        Items.registerItem(new GlacialSword());
 
         int halfSize = 4;
         int centerX = 0;
