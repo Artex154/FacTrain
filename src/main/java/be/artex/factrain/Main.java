@@ -4,6 +4,7 @@ import be.artex.factrain.api.items.Items;
 import be.artex.factrain.items.bows.CupidonBow;
 import be.artex.factrain.items.bows.EnderBow;
 import be.artex.factrain.items.swords.AssasinSword;
+import be.artex.factrain.listeners.FoodLevelChange;
 import be.artex.factrain.listeners.InventoryClick;
 import be.artex.factrain.listeners.gameLoop.PlayerJoin;
 import be.artex.factrain.listeners.gameLoop.PlayerRespawn;
@@ -29,6 +30,10 @@ public final class Main extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new EntityHitEntity(), this);
         this.getServer().getPluginManager().registerEvents(new ProjectileHit(), this);
         this.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
+        this.getServer().getPluginManager().registerEvents(new FoodLevelChange(), this);
+
+        Bukkit.getWorlds().get(0).setGameRuleValue("doDaylightCycle", "false");
+        Bukkit.getWorlds().get(0).setGameRuleValue("doMobSpawning", "false");
 
         Items.registerItem(new EnderBow());
         Items.registerItem(new AssasinSword());
