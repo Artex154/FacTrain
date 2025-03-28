@@ -23,6 +23,7 @@ public class PlayerRespawn implements Listener {
     @EventHandler
     public void onPlayerDie(PlayerDeathEvent e) {
         e.getDrops().clear();
+        e.getEntity().getInventory().clear();
 
         if (e.getEntity().getKiller() == null) {
             return;
