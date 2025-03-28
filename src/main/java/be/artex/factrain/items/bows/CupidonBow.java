@@ -40,7 +40,7 @@ public class CupidonBow extends BowItem {
     }
 
     @Override
-    public void onArrowShot(EntityShootBowEvent e) {
+    public void onArrowShot(EntityShootBowEvent event) {
 
     }
 }

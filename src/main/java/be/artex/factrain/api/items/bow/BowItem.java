@@ -4,7 +4,7 @@ import be.artex.factrain.api.items.Item;
 import org.bukkit.event.entity.EntityShootBowEvent;
 
 public abstract class BowItem extends Item {
-    public abstract void onArrowShot(EntityShootBowEvent e);
+    public abstract void onArrowShot(EntityShootBowEvent event);
 
 
 }

@@ -33,7 +33,7 @@ public class EnderBow extends BowItem {
                 .addEnchant(Enchantment.ARROW_INFINITE, 1)
                 .addEnchant(Enchantment.DURABILITY, 5, true)
                 .addEnchant(Enchantment.ARROW_FIRE, 1)
-                .addEnchant(Enchantment.ARROW_KNOCKBACK, 4, true)
+                .addEnchant(Enchantment.ARROW_KNOCKBACK, 2, true)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)
                 .build();
     }
@@ -75,15 +75,15 @@ public class EnderBow extends BowItem {
     }
 
     @Override
-    public void onArrowShot(EntityShootBowEvent e) {
-        if (!e.getEntity().getType().equals(EntityType.PLAYER))
+    public void onArrowShot(EntityShootBowEvent event) {
+        if (!event.getEntity().getType().equals(EntityType.PLAYER))
             return;
 
-        Player player = (Player) e.getEntity();
+        Player player = (Player) event.getEntity();
 
         if (playersMode.get(player.getUniqueId()) == null || playersMode.get(player.getUniqueId())) {
-            e.setProjectile(null);
-            e.getEntity().launchProjectile(EnderPearl.class);
+            event.setProjectile(null);
+            event.getEntity().launchProjectile(EnderPearl.class);
         }
     }
 }

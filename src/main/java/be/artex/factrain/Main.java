@@ -7,6 +7,7 @@ import be.artex.factrain.items.swords.AssasinSword;
 import be.artex.factrain.items.swords.GlacialSword;
 import be.artex.factrain.listeners.FoodLevelChange;
 import be.artex.factrain.listeners.InventoryClick;
+import be.artex.factrain.listeners.gameLoop.PlayerItemDamage;
 import be.artex.factrain.listeners.gameLoop.PlayerJoin;
 import be.artex.factrain.listeners.gameLoop.PlayerRespawn;
 import be.artex.factrain.listeners.items.EntityHitEntity;
@@ -32,6 +33,7 @@ public final class Main extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new ProjectileHit(), this);
         this.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         this.getServer().getPluginManager().registerEvents(new FoodLevelChange(), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerItemDamage(), this);
 
         Bukkit.getWorlds().get(0).setGameRuleValue("doDaylightCycle", "false");
         Bukkit.getWorlds().get(0).setGameRuleValue("doMobSpawning", "false");
