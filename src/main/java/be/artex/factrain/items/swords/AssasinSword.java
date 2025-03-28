@@ -21,7 +21,6 @@ public class AssasinSword extends SwordItem {
                 .setLore(ChatColor.DARK_GRAY + "uIoPMlkhJNBfGhBNaEhJ", " ", ChatColor.GOLD + "Fire Aspect 2" + ChatColor.DARK_GRAY + ", " + ChatColor.RED + "Sharpness 6")
                 .addEnchant(Enchantment.FIRE_ASPECT, 2)
                 .addEnchant(Enchantment.DAMAGE_ALL, 6, true)
-                .addEnchant(Enchantment.DURABILITY, 5, true)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)
                 .build();
     }

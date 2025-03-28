@@ -29,7 +29,6 @@ public class GlacialSword extends SwordItem {
                 .setLore(ChatColor.DARK_GRAY + "agJUoyDugHGFbzReKmLn", " ", ChatColor.GOLD + "Fire Aspect 2" + ChatColor.DARK_GRAY + ", " + ChatColor.RED + "Sharpness 5", " ", ChatColor.GRAY + "Permet de donner" + ChatColor.DARK_GRAY + " slowness " + ChatColor.GRAY + "en " + ChatColor.RED + "tappant" + ChatColor.GRAY + ".")
                 .addEnchant(Enchantment.FIRE_ASPECT, 2)
                 .addEnchant(Enchantment.DAMAGE_ALL, 5)
-                .addEnchant(Enchantment.DURABILITY, 5, true)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)
                 .build();
     }

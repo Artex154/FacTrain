@@ -22,7 +22,6 @@ public class CupidonBow extends BowItem {
                         ChatColor.GOLD + "Flame" + ChatColor.DARK_GRAY + ", " + ChatColor.RED + "Power 5" + ChatColor.DARK_GRAY + ", " + ChatColor.DARK_PURPLE + "Infinity" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Punch 4", " ")
                 .addEnchant(Enchantment.ARROW_DAMAGE, 5)
                 .addEnchant(Enchantment.ARROW_INFINITE, 1)
-                .addEnchant(Enchantment.DURABILITY, 5, true)
                 .addEnchant(Enchantment.ARROW_FIRE, 1)
                 .addEnchant(Enchantment.ARROW_KNOCKBACK, 4, true)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)

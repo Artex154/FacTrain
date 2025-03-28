@@ -27,11 +27,10 @@ public class EnderBow extends BowItem {
                 .displayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Arc de l'Ender")
                 .setLore(ChatColor.DARK_GRAY + "aUIplMoKmLLghvBNaOmK", " ",
                         ChatColor.GOLD + "Flame" + ChatColor.DARK_GRAY + ", " + ChatColor.RED + "Power 5" + ChatColor.DARK_GRAY + ", " + ChatColor.DARK_PURPLE + "Infinity" + ChatColor.DARK_GRAY + ", " + ChatColor.LIGHT_PURPLE + "Punch 2", " ",
-                        ChatColor.GRAY + "Permet d'avec un " + ChatColor.AQUA + "Clic Gauche" + ChatColor.GRAY + ", d'Activer ou de Désactiver, le mode " + ChatColor.DARK_PURPLE + "Ender" + ChatColor.GRAY + ".",
+                        ChatColor.GRAY + "En faisant un " + ChatColor.AQUA + "Sneak Clic Gauche" + ChatColor.GRAY + ", vous" + ChatColor.GREEN + " Activerez" + ChatColor.GRAY + " ou" + ChatColor.RED + " Désactiverez" + ChatColor.GRAY + ", le mode " + ChatColor.DARK_PURPLE + "Ender" + ChatColor.GRAY + ".",
                         ChatColor.GRAY + "Avec le mode " + ChatColor.DARK_PURPLE + "Ender" + ChatColor.GRAY + ", qaund vous tirez, vous faites apparaitre une" + ChatColor.DARK_PURPLE + " Ender Pearl" + ChatColor.GRAY + ".", " ")
                 .addEnchant(Enchantment.ARROW_DAMAGE, 5)
                 .addEnchant(Enchantment.ARROW_INFINITE, 1)
-                .addEnchant(Enchantment.DURABILITY, 5, true)
                 .addEnchant(Enchantment.ARROW_FIRE, 1)
                 .addEnchant(Enchantment.ARROW_KNOCKBACK, 2, true)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)
@@ -49,6 +48,10 @@ public class EnderBow extends BowItem {
             return;
 
         Player player = event.getPlayer();
+
+        if (!player.isSneaking())
+            return;
+
         UUID playerUUID = player.getUniqueId();
 
         if (playersMode.get(playerUUID) == null) {
