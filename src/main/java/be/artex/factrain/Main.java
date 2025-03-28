@@ -5,9 +5,11 @@ import be.artex.factrain.items.bows.CupidonBow;
 import be.artex.factrain.items.bows.EnderBow;
 import be.artex.factrain.items.swords.AssasinSword;
 import be.artex.factrain.items.swords.GlacialSword;
+import be.artex.factrain.items.swords.ZeusSword;
+import be.artex.factrain.listeners.EntityDamage;
 import be.artex.factrain.listeners.FoodLevelChange;
 import be.artex.factrain.listeners.InventoryClick;
-import be.artex.factrain.listeners.gameLoop.PlayerItemDamage;
+import be.artex.factrain.listeners.items.PlayerItemDamage;
 import be.artex.factrain.listeners.gameLoop.PlayerJoin;
 import be.artex.factrain.listeners.gameLoop.PlayerRespawn;
 import be.artex.factrain.listeners.items.EntityHitEntity;
@@ -34,15 +36,17 @@ public final class Main extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         this.getServer().getPluginManager().registerEvents(new FoodLevelChange(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerItemDamage(), this);
+        this.getServer().getPluginManager().registerEvents(new EntityDamage(), this);
 
         Bukkit.getWorlds().get(0).setGameRuleValue("doDaylightCycle", "false");
         Bukkit.getWorlds().get(0).setGameRuleValue("doMobSpawning", "false");
 
         Items.registerItem(new EnderBow());
-        Items.registerItem(new AssasinSword());
         Items.registerItem(new CupidonBow());
 
         Items.registerItem(new GlacialSword());
+        Items.registerItem(new AssasinSword());
+        Items.registerItem(new ZeusSword());
 
         int halfSize = 4;
         int centerX = 0;

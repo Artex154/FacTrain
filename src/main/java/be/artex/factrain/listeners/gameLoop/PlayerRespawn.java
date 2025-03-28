@@ -2,6 +2,7 @@ package be.artex.factrain.listeners.gameLoop;
 
 import be.artex.factrain.Stacks;
 import be.artex.factrain.api.Runs;
+import be.artex.factrain.items.swords.ZeusSword;
 import be.artex.factrain.listeners.items.PlayerInteract;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
@@ -33,5 +34,7 @@ public class PlayerRespawn implements Listener {
         PlayerInteract.prepareGear(Runs.getPlayerRuns(e.getEntity().getKiller()));
 
         e.getEntity().getKiller().setHealth(e.getEntity().getKiller().getMaxHealth());
+
+        ZeusSword.playerWithSpeed.remove(e.getEntity().getUniqueId());
     }
 }

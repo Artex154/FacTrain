@@ -1,4 +1,4 @@
-package be.artex.factrain.listeners.gameLoop;
+package be.artex.factrain.listeners.items;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
